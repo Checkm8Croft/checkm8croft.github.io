@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootcamp</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="text-block" id="bootcamp">
+        <p>Bootcamp is a tool for Intel Macs that allows you to run Windows natively on your Mac hardware.</p>
+        <p>For install Windows 10/11 you need an iso for it and bootcamp drivers</p>
+        <p>First download the Windows 10/11 ISO from the official Microsoft website.</p>
+        <p>Now download bootcamp drivers <a href="https://gist.github.com/nuomi1/16133b89c2b38b7eb197" class="game-button">You can find them here by your mac model</a></p>
+        <p>Now take an USB with least 8 GB of space and plug it into your Mac.</p>
+        <p>Make sure that is in exFAT and in GPT, if not you can use Disk Utility to format it.</p>
+        <p>Once you download the ISO, open terminal and type <strong>diskutil list</strong> for see the list of disks attached on your system</p>
+        <p>Now you have to find the identifier of your USB drive (e.g. disk2, disk3, etc.)</p>
+        <p>Type <strong>diskutil unmountDisk /dev/diskX</strong> (replace X with your disk number)</p>
+        <p>Type <strong>sudo dd if=/path/to/windows.iso of=/dev/diskX bs=1m</strong> (Type the path where you download the iso and replace X with your disk number)</p>
+        <p>Once finished, open Disk Utility, hold 􀆔+2 for see full drive names.</p>
+        <p>Select the SSD of your Mac (not the macOS partition!)</p>
+        <p>Select Partition and add a partition of at least 64 GB for Windows. Format is in extfat or directly in NTFS if you have a NTFS driver such as Paragon NTFS or Tuxera NTFS.</p>
+        <p>Now copy downloaded bootcamp drivers into the usb.</p>
+        <p>Once finished reboot your Mac and hold the 􀆕 while it boots up; or directly select from OpenCore boot menu if you have it</p>
+        <p>Once entered on the windows installed, you should see the partition that we created before, format it before and proceed with the installation.</p>
+        <p>Once the installation is complete, you can install the bootcamp drivers from the USB drive.</p>
+        <h2>All done!</h2>
+    </div>
+</body>
+</html>

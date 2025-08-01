@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomb Raider 1</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="back-arrow">
+            <img src="../Arrow Backwards.png" alt="Back" width="50">
+        </a>
+        <div class="header-center">
+            <img src="../Symbols/Scion.png" alt="">
+            <h1>Tomb Raider 1</h1>
+        </div>
+    </header>
+    <h1>Index</h1>
+    <ul>
+        <li><a href="#tr1x">TR1X (Recommended)</a></li>
+        <li><a href="#dosbox">DoxBox</a></li>
+        <li><a href="#bootcamp">Bootcamp</a></li>
+        <li><a href="#wine">Wine</a></li>
+        <li><a href="#vm">Windows Virtual Machines</a></li>
+    </ul>
+    <img src="IMGs/TR1X/Lara 1.png" alt="" class="lara-img" align="right">
+    <div class="icon-title">
+        <h2 class="title-line">TR1X (Recommended)</h2>
+        <img src="../Symbols/TR1X.png" alt=""> 
+    </div>
+    <div class="text-block" id="tr1x">
+        <p>TR1X is an open source implementation of original TR1 engine</p>
+        <p>It has a lot of features, improvements and is cross platform, so you can play it also on macOS and Linux</p>
+        <a href="https://github.com/LostArtefacts/TRX" class="game-button">See here official repo</a>
+        <p>To install it, you can run my <strong>install tr1x.py script</strong>, othewise, go to the repo, to releases and download latest TR1X DMG</p>
+        <img src="IMGs/TR1X/1.png" alt="1">
+        <img src="IMGs/TR1X/2.png" alt="2">
+        <img src="IMGs/TR1X/Lara 2.png" alt="" align="right" class="lara-img">
+        <p>Mount the DMG and drag TR1X app in Applications</p>
+        <img src="IMGs/TR1X/3.png" alt="3">
+        <p>You should see TR1X on the <strong>Applications</strong> folder</p>
+        <img src="IMGs/TR1X/4.png" alt="4">
+        <img src="IMGs/TR1X/Lara 3.png" alt="" align="right" class="lara-img">
+        <p>Now right click on TR1X and click <strong>Show package contents</strong></p>
+        <img src="IMGs/TR1X/5.png" alt="5">
+        <p>Now you have to copy original game files into TR1X, so from a STEAM/GOG/PC copy, copy the <strong>data folder</strong> into <strong>Applications/TR1X.app/Contents/Resources/</strong></p>
+        <img src="IMGs/TR1X/6.png" alt="6">
+        <p>Now you have to download music tracks (in English) and (if you want) the Unfinished Business expansion</p>
+        <a href="https://lostartefacts.dev/aux/tr1x/music.zip" class="game-button">Download Music</a>
+        <br><br><br>
+        <img src="IMGs/TR1X/Lara 4.png" alt="" align="right" class="lara-img">
+        <a href="https://lostartefacts.dev/aux/tr1x/trub-music.zip" class="game-button">Download Unfinished Business (Fan-Made edition with music triggers)</a>
+        <br><br><br>
+        <a href="https://lostartefacts.dev/aux/tr1x/trub-vanilla.zip" class="game-button">Download Unfinished Business (Original edition without music trsiggers)</a>
+        <p>Extract the downloaded music tracks and copy them into <strong>Applications/TR1X.app/Contents/Resources/music</strong></p>
+        <img src="IMGs/TR1X/7.png" alt="7">
+        <p>If you decided also to download the UB version, you have just to extract the files from the zip and copy extracted files into data folder</p>
+        <h2>Enjoy!</h2>
+    </div>
+    <br>
+    <div class="icon-title">
+        <h2 class="title-line">DosBox</h2>
+        <img src="../Symbols/DosBox.png" alt="">
+    </div>
+    <div class="text-block" id="dosbox">
+        <p>DosBox is a cross platform MS-DOS emulator, can also emulate MS-DOS version of Tomb Raider 1</p>
+        <p>I don't recommended to use DosBox beacuse the game is low quality and is complicated to run it every time</p>
+        <p>You will'have to install dosbox staging, with this command: <strong>brew install dosbox-staging</strong> or you can install also the standalone version</p>
+        <p>After that, you have to download the original game iso or CD</p>
+        <p>Then, you have to mount the CD in DosBox, with this command: <strong>mount d /Volumes/"Your CD name"/</strong></p>
+        <p>Then, you have to mount the game folder, with this command: <strong>mount c /"Any Path You Want"/ (e.g. /Users/YourUsername/Games/TombRaider1)</strong></p>
+        <p>Now type <strong>c:</strong> to switch to the CD directory</p>
+        <p>Now install TR1 with <strong>install.exe</strong></p>
+        <p>After installed type <strong>C:</strong> and <strong>cd C:\TOMBRAID</strong></p>
+        <p>Now you can run the game with <strong>TR1.exe</strong></p>
+    </div>
+    <div class="icon-title">
+        <h2 class="title-line" id="bootcamp">Bootcamp</h2>
+        <img src="../Symbols/Bootcamp.png" alt="">
+    </div>
+    <div id="bootcamp-content" class="text-block"></div>
+    <br>
+    <div class="icon-title">
+        <h2 class="title-line" id="wine">Wine</h2>
+        <img src="../Symbols/Wine.png" alt="">
+    </div>
+    <div id="wine-content" class="text-block"></div>
+    <br>
+    <div class="icon-title">
+        <h2 class="title-line" id="vm">Windows Virtual Machines</h2>
+        <img src="../Symbols/VMs.png" alt="">
+    </div>  
+    <div id="vm-content" class="text-block"></div>
+    <br>
+    <script src="../Univ/UnivPages.js"></script>
+    <script>
+  // Carica subito i contenuti nei rispettivi div
+  loadUnivPage('Bootcamp');
+  loadUnivPage('Wine');
+  loadUnivPage('VMs');
+</script>
+</body>
+</html>

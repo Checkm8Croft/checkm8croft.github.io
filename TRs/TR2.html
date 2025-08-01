@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomb Raider 2</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../Lara Apple.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="back-arrow">
+            <img src="../Arrow Backwards.png" alt="Back" width="50">
+        </a>
+        <div class="header-center">
+            <img src="../Symbols/FiammaNera.png" alt="">
+            <h1>Tomb Raider 2</h1>
+        </div>
+    </header>
+    <h1>Index</h1>
+    <ul>
+        <li><a href="#tr2x">TR2X (Recommended)</a></li>
+        <li><a href="#bootcamp">Bootcamp</a></li>
+        <li><a href="#wine">Wine</a></li>
+        <li><a href="#vm">Windows Virtual Machines (Parallels, VMware, VirtualBox)</a></li>
+    </ul>
+    <div class="icon-title">
+        <h2 class="title-line">TR2X (Recommended)</h2>
+        <img src="../Symbols/TR2X.png" alt="">
+    </div>
+    <div class="text-block" id="tr2x">
+        <p>TR2X is an open source implementation of original TR2 engine</p>
+        <p>It has a lot of features, improvements and is cross platform, so you can play it also on macOS and Linux</p>
+        <img src="IMGs/TR2X/Lara 1.png" alt="" class="lara-img" align="right">
+        <a href="https://github.com/LostArtefacts/TRX/" class="game-button">See here official repo</a>
+        <p>To install it, you can run my <strong>install tr2x.py script</strong>, othewise, go to the repo, to releases and download latest TR2X DMG</p>
+        <img src="IMGs/TR2X/1.png" alt="1">
+        <img src="IMGs/TR2X/2.png" alt="2">
+        <img src="IMGs/TR2X/Lara 2.png" alt="" class="lara-img" align="right">
+        <p>Mount the DMG and drag TR2X app in Applications</p>
+        <img src="IMGs/TR2X/3.png" alt="3">
+        <p>You should see TR2X on the <strong>Applications</strong> folder</p>
+        <img src="IMGs/TR2X/4.png" alt="4">
+        <p>Now right click on TR2X and click <strong>Show package contents</strong></p>
+        <img src="IMGs/TR2X/Lara 3.png" alt="" class="lara-img" align="right">
+        <img src="IMGs/TR2X/5.png" alt="5">
+        <p>Now you have to copy original game files into TR2X, so from a STEAM/GOG/PC copy, copy the <strong>data folder</strong> into <strong>Applications/TR2X.app/Contents/Resources/</strong></p>
+        <p>Now you have to download music tracks (in English) and (if you want) the Unfinished Business expansion</p>
+        <a href="https://lostartefacts.dev/aux/tr2x/music.zip" class="game-button">Download Music</a>
+        <br><br><br>
+        <a href="https://lostartefacts.dev/aux/tr2x/trgm.zip" class="game-button">Download Golden Mask</a>
+        <p>Extract the downloaded music tracks and copy them into <strong>Applications/TR2X.app/Contents/Resources/music</strong></p>
+        <img src="IMGs/TR2X/6.png" alt="7">
+        <p>If you decided also to download the GM version, you have just to extract the files from the zip and copy extracted files into data folder</p>
+        <h2>Enjoy!</h2>
+    </div>
+    <div class="icon-title">
+        <h2 class="title-line" id="bootcamp">Bootcamp</h2>
+        <img src="../Symbols/Bootcamp.png" alt="">
+    </div>
+    <div id="bootcamp-content" class="text-block"></div>
+    <br>
+    <div class="icon-title">
+        <h2 class="title-line" id="wine">Wine</h2>
+        <img src="../Symbols/Wine.png" alt="">
+    </div>
+    <div id="wine-content" class="text-block"></div>
+    <br>
+    <div class="icon-title">
+        <h2 class="title-line" id="vm">Windows Virtual Machines</h2>
+        <img src="../Symbols/VMs.png" alt="">
+    </div>
+    <div id="vm-content" class="text-block"></div>
+    <br>
+    <script src="../Univ/UnivPages.js"></script>
+    <script>
+  // Carica subito i contenuti nei rispettivi div
+  loadUnivPage('Bootcamp');
+  loadUnivPage('Wine');
+  loadUnivPage('VMs');
+</script>
+</body>
+</html>
