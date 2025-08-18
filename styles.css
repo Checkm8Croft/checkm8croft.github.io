@@ -23,9 +23,10 @@ body{
 nav {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: right;
   padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 nav ul{
@@ -35,4 +36,16 @@ nav ul{
     align-items: center;
     justify-content: center;
     gap: 20px; /* Spazio tra i link */
+}
+
+nav a{
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+nav a:hover{
+  border-bottom: 2px solid lime;
 }
