@@ -1,0 +1,70 @@
+<h1>TRX for iOS</h1>
+<img src="imgs/TRX.png" alt="">
+<p>I'm glad to announce that I ported TRX to iOS!</p>
+<p>I ported (with Claude) the TRX Tomb Raider implementation to iOS, from glew to gles.</p>
+<p class="disclaimer">Note: This project is made by the LostArtefacts team, this is just a fork, if you are having any issues, please report don't them on the official repository, the repo will be updated once every stable update</p>
+<p>The fact that is on gles, it could support other platforms as well.</p>
+<p>Tested devices:</p>
+<ul>
+    <li>iPhone 12 Pro</li>
+    <li>iPhone X</li>
+    <li>iPad 6th Generation</li>
+</ul>
+<h1>Download</h1>
+<a href="https://github.com/Checkm8Croft/TRX/releases/download/1.9.2/TRX.ipa" class="download-button">Download TRX for iOS</a><p>Version: Stable 1.9.2</p>
+<a href="https://github.com/Checkm8Croft/TRX/" class="download-button"><img src="imgs/gh.png" alt="GitHub">View on GitHub</a>
+<h1>Build Instructions</h1>
+<h2>Requirements</h2>
+<ul class="reqs">
+    <li>A Mac or Linux PC</li>
+    <ul class="empty-list">
+        <li>- On macOS Xcode with iOS SDK</li>
+        <li>- On Linux install iOS SDK with Theos</li>
+    </ul>
+    <li>(macOS only) a package manager, Homebrew or MacPorts (if you have both, use MacPorts)</li>
+    <li>These Dependencies:</li>
+    <ul class="empty-list">
+        <li>The Specific iOS arm64 Libraries are already included in <code>tools/share/ios/deps</code></li>
+        <li>pkgconfig</li>
+        <li>uthash</li>
+        <li>meson</li>
+        <li>python@3.14</li>
+    </ul>
+    <li>an iOS device running at least iOS 16</li>
+</ul>
+<h2>Compiling</h2>
+<ul class="reqs">
+    <li>Before compiling, run:</li>
+    <code>./tools/download_assets</code><p>for downloading Tomb Raider assets</p>
+    <li>Now you can configure the build:</li>
+    <code>meson setup build-ios-arm64 src --cross-file tools/shared/ios/arm64_device_cross_file.txt</code><p>(optional: add <code>--buildtype debug</code> for debug)</p>
+    <li>Once configured, run;</li>
+    <code>ninja -C build-ios-arm64</code>
+</ul>
+<h2>Creating the IPA</h2>
+<ul class="reqs">
+    <li>You can run:</li>
+    <code>./tools/shared/ios/gen_ipa.py</code>
+    <br><br>
+    <li>If you'd like to create it manually:</li>
+    <code>cd build-ios-arm64</code>
+    <code>mkdir -p Payload/TRX.app</code>
+    <code>cp TRX Payload/TRX.app/TRX</code>
+    <code>cp ../data/trx/icon.png Payload/TRX.app</code>
+    <code>cp -R ../data/trx/ship/cfg Payload/TRX.app</code>
+    <code>cp -R ../tools/shared/ios/LaunchScreen.storyboardc Payload/TRX.app</code>
+    <code>cp -R ../tools/share/ios/Info.plist Payload/TRX.app</code>
+    <h3>Check the .app structure</h3>
+    <li class="empty-list">TRX.app/</li>
+    <ul class="empty-list" class="structure">
+        <li>cfg/</li>
+        <li>icon.png</li>
+        <li>Info.plist</li>
+        <li>LaunchScreen.storyboardc/</li>
+        <li>TRX</li>
+    </ul>
+    <code>zip -r TRX.ipa Payload</code>
+</ul>
+<h3>Now you can sideload the ipa in your iDevice</h3>
+<p>Also you'll have to copy game files on TRX folder on Files App</p>
+<h1>Enjoy!</h1>
