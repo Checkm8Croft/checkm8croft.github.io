@@ -121,3 +121,9 @@ footer{
   border-radius: 10px;
   margin: 20px;
 }
+
+.workinprogress{
+  color: red;
+  font-size: 50px;
+  font-weight: bold;
+}

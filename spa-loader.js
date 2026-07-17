@@ -9,7 +9,8 @@ const CONTENT_CONTAINER_ID = 'dynamic-content';
  */
 async function loadPage(filePath) {
     try {
-        const response = await fetch(filePath);
+        // Cache buster per forzare il browser a richiedere sempre la versione aggiornata
+        const response = await fetch(`${filePath}?_=${Date.now()}`);
         
         if (!response.ok) {
             throw new Error(`Errore nel caricamento: ${response.status}`);
@@ -27,10 +28,13 @@ async function loadPage(filePath) {
         const content = extractBodyContent(html);
         container.innerHTML = content;
         
-        // Inizializza le checkbox dopo il rendering del contenuto
+        // Inizializza il contenuto dopo il rendering del contenuto
         setTimeout(() => {
             if (window.initializeChecklist) {
                 window.initializeChecklist(container);
+            }
+            if (window.initializeWorkInProgress) {
+                window.initializeWorkInProgress(container);
             }
         }, 10);
         
